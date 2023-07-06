@@ -26,11 +26,11 @@ console.log(shortedPathsResultsTableFromA);
 console.log("shortest path to node c from node a arr");
 const shortestPathFromAToC: string[] = getShortestPath(
     shortedPathsResultsTableFromA,
-    "c"
+    "c",
 );
 console.log(shortestPathFromAToC);
 
 console.log(
-    "shorted path to node 'c' from node 'a' in formatted directional path string"
+    "shorted path to node 'c' from node 'a' in formatted directional path string",
 );
 console.log(getShortedPathArrowedFormattedString(shortestPathFromAToC));

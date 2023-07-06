@@ -17,7 +17,7 @@ describe("graph a tests", () => {
 
     const graphADijkstrasResultsLookUpTableFromNodeA = dijkstrasAlgorithm(
         graphA,
-        "a"
+        "a",
     );
 
     const resultsTableExpected: DijkstrasResultsTableMap = {
@@ -30,31 +30,31 @@ describe("graph a tests", () => {
 
     test("test results table from node a correctness", () => {
         expect(graphADijkstrasResultsLookUpTableFromNodeA).toEqual(
-            resultsTableExpected
+            resultsTableExpected,
         );
     });
 
     test("test shortest path to a from a", () => {
         expect(
-            getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "a")
+            getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "a"),
         ).toEqual(["a"]);
     });
 
     test("test shortest path to c from a", () => {
         expect(
-            getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "c")
+            getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "c"),
         ).toEqual(["a", "d", "e", "c"]);
     });
 
     test("test shortest path to e from a", () => {
         expect(
-            getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "e")
+            getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "e"),
         ).toEqual(["a", "d", "e"]);
     });
 
     test("test throws when string node to search from doesn't exist in graph", () => {
         expect(() => dijkstrasAlgorithm(graphA, "z")).toThrow(
-            "node to search from doesn't exist in graph"
+            "node to search from doesn't exist in graph",
         );
     });
 });
@@ -97,8 +97,8 @@ describe("graph b tests", () => {
     test("test shortest path to c from a in directional arrow string format", () => {
         expect(
             getShortedPathArrowedFormattedString(
-                getShortestPath(djistrasResultsLookUpTableFromA, "c")
-            )
+                getShortestPath(djistrasResultsLookUpTableFromA, "c"),
+            ),
         ).toEqual("a --> b --> d --> f --> c");
     });
 });
