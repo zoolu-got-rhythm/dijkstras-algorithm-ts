@@ -1,5 +1,5 @@
 {
-    "name": "dijkstras-algorithm",
+    "name": "dijkstras-algorithm-ts",
     "version": "1.0.0",
     "author": "christopher.pkm@gmail.com",
     "description": "implementation of the greedy first search djikstra's algorithm",
@@ -30,6 +30,14 @@
         "ts-jest": "^29.1.1",
         "typescript": "^5.0.4"
     },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/zoolu-got-rhythm/dijkstras-algorithm-ts.git"
+    },
+    "bugs": {
+        "url": "https://github.com/zoolu-got-rhythm/dijkstras-algorithm-ts/issues"
+    },
+    "homepage": "https://github.com/zoolu-got-rhythm/dijkstras-algorithm-ts/blob/main/README.md",
     "scripts": {
         "build": "tsc",
         "start": "npm run build && node dist/index.js",
