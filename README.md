@@ -12,13 +12,14 @@
 ## running
 
 -   npm i
--   npx tsc && node dist/index.js
+-   npx run start
 
 ## running tests
 
--   npx jest
+-   npx run test
 
 ## graphs tested with usage code examples
+look at index.ts code for example usage! or read below for a more in detail explaination of how to use code. 
 
 ### graph A tested with example code usage
 
