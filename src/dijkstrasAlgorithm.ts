@@ -21,10 +21,10 @@ export function dijkstrasAlgorithm(
     nonDirectedGraphMap: DijkstrasNonDirectedGraphMap,
     fromNode: string,
 ): DijkstrasResultsTableMap {
-    let visited: string[] = [fromNode];
-    let allNodes: string[] = [];
+    const visited: string[] = [fromNode];
+    const allNodes: string[] = [];
 
-    let resultsTable: DijkstrasResultsTableMap = {};
+    const resultsTable: DijkstrasResultsTableMap = {};
     for (const node in nonDirectedGraphMap) {
         allNodes.push(node);
         resultsTable[node] = {

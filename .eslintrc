@@ -9,6 +9,7 @@
         "prettier"
     ],
     "rules": {
+        "@typescript-eslint/ban-ts-comment": 1,
         "no-console": 2
     }
 }
