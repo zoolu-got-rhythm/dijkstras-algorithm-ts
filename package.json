@@ -1,6 +1,6 @@
 {
     "name": "dijkstras-algorithm-ts",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "christopher.pkm@gmail.com",
     "description": "implementation of the greedy first search djikstra's algorithm",
     "license": "MIT",
@@ -31,8 +31,8 @@
         "typescript": "^5.0.4"
     },
     "repository": {
-      "type": "git",
-      "url": "https://github.com/zoolu-got-rhythm/dijkstras-algorithm-ts.git"
+        "type": "git",
+        "url": "https://github.com/zoolu-got-rhythm/dijkstras-algorithm-ts.git"
     },
     "bugs": {
         "url": "https://github.com/zoolu-got-rhythm/dijkstras-algorithm-ts/issues"
