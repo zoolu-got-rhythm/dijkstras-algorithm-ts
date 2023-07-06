@@ -15,10 +15,7 @@ describe("graph a tests", () => {
         e: { d: 1, b: 2, c: 5 },
     };
 
-    const graphADijkstrasResultsLookUpTableFromNodeA = dijkstrasAlgorithm(
-        graphA,
-        "a",
-    );
+    const graphADijkstrasResultsLookUpTableFromNodeA = dijkstrasAlgorithm(graphA, "a");
 
     const resultsTableExpected: DijkstrasResultsTableMap = {
         a: { shortestDistanceFromNodeX: 0, previousVertex: null },
@@ -29,33 +26,23 @@ describe("graph a tests", () => {
     };
 
     test("test results table from node a correctness", () => {
-        expect(graphADijkstrasResultsLookUpTableFromNodeA).toEqual(
-            resultsTableExpected,
-        );
+        expect(graphADijkstrasResultsLookUpTableFromNodeA).toEqual(resultsTableExpected);
     });
 
     test("test shortest path to a from a", () => {
-        expect(
-            getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "a"),
-        ).toEqual(["a"]);
+        expect(getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "a")).toEqual(["a"]);
     });
 
     test("test shortest path to c from a", () => {
-        expect(
-            getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "c"),
-        ).toEqual(["a", "d", "e", "c"]);
+        expect(getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "c")).toEqual(["a", "d", "e", "c"]);
     });
 
     test("test shortest path to e from a", () => {
-        expect(
-            getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "e"),
-        ).toEqual(["a", "d", "e"]);
+        expect(getShortestPath(graphADijkstrasResultsLookUpTableFromNodeA, "e")).toEqual(["a", "d", "e"]);
     });
 
     test("test throws when string node to search from doesn't exist in graph", () => {
-        expect(() => dijkstrasAlgorithm(graphA, "z")).toThrow(
-            "node to search from doesn't exist in graph",
-        );
+        expect(() => dijkstrasAlgorithm(graphA, "z")).toThrow("node to search from doesn't exist in graph");
     });
 });
 
@@ -85,20 +72,12 @@ describe("graph b tests", () => {
     });
 
     test("test shortest path to c from a", () => {
-        expect(getShortestPath(djistrasResultsLookUpTableFromA, "c")).toEqual([
-            "a",
-            "b",
-            "d",
-            "f",
-            "c",
-        ]);
+        expect(getShortestPath(djistrasResultsLookUpTableFromA, "c")).toEqual(["a", "b", "d", "f", "c"]);
     });
 
     test("test shortest path to c from a in directional arrow string format", () => {
-        expect(
-            getShortedPathArrowedFormattedString(
-                getShortestPath(djistrasResultsLookUpTableFromA, "c"),
-            ),
-        ).toEqual("a --> b --> d --> f --> c");
+        expect(getShortedPathArrowedFormattedString(getShortestPath(djistrasResultsLookUpTableFromA, "c"))).toEqual(
+            "a --> b --> d --> f --> c",
+        );
     });
 });

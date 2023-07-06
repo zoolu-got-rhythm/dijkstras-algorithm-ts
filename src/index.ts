@@ -17,20 +17,14 @@ export const graph: DijkstrasNonDirectedGraphMap = {
     e: { d: 1, b: 2, c: 5 },
 };
 
-const shortedPathsResultsTableFromA: DijkstrasResultsTableMap =
-    dijkstrasAlgorithm(graph, "a");
+const shortedPathsResultsTableFromA: DijkstrasResultsTableMap = dijkstrasAlgorithm(graph, "a");
 
 console.log("shortest path results table from node a");
 console.log(shortedPathsResultsTableFromA);
 
 console.log("shortest path to node c from node a arr");
-const shortestPathFromAToC: string[] = getShortestPath(
-    shortedPathsResultsTableFromA,
-    "c",
-);
+const shortestPathFromAToC: string[] = getShortestPath(shortedPathsResultsTableFromA, "c");
 console.log(shortestPathFromAToC);
 
-console.log(
-    "shorted path to node 'c' from node 'a' in formatted directional path string",
-);
+console.log("shorted path to node 'c' from node 'a' in formatted directional path string");
 console.log(getShortedPathArrowedFormattedString(shortestPathFromAToC));
