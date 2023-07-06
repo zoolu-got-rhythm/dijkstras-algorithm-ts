@@ -1,0 +1,46 @@
+{
+    "name": "dijkstras-algorithm",
+    "version": "1.0.0",
+    "author": "christopher.pkm@gmail.com",
+    "description": "implementation of the greedy first search djikstra's algorithm",
+    "license": "MIT",
+    "keywords": [
+        "dijkstras",
+        "algorithm",
+        "typescript",
+        "javascript",
+        "path",
+        "finding",
+        "shortest",
+        "greedy",
+        "graph",
+        "first"
+    ],
+    "main": "dist/dijkstrasAlgorithm.js",
+    "types": "dist/dijkstrasAlgorithm.d.ts",
+    "devDependencies": {
+        "@types/jest": "^29.5.0",
+        "@typescript-eslint/eslint-plugin": "^5.61.0",
+        "@typescript-eslint/parser": "^5.61.0",
+        "eslint": "^8.44.0",
+        "eslint-config-prettier": "^8.8.0",
+        "jest": "^29.5.0",
+        "prettier": "^3.0.0",
+        "ts-jest": "^29.1.1",
+        "typescript": "^5.0.4"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "jest",
+        "format": "prettier --write \"src/**/*.ts\"",
+        "lint": "eslint . --ext .ts",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run lint",
+        "version": "npm run format && git add .",
+        "postversion": "git push && git push --tags"
+    },
+    "files": [
+        "dist/**/*"
+    ]
+}
