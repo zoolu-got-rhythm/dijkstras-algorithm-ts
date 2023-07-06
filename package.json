@@ -32,6 +32,7 @@
     },
     "scripts": {
         "build": "tsc",
+        "start": "npm run build && node dist/index.js",
         "test": "jest",
         "format": "prettier --write \"src/**/*.ts\"",
         "lint": "eslint . --ext .ts",
