@@ -17,10 +17,7 @@ export type DijkstrasResultsTableMap = {
  * implementation of the greedy first search dijkstras algorithm
  */
 
-export function dijkstrasAlgorithm(
-    nonDirectedGraphMap: DijkstrasNonDirectedGraphMap,
-    fromNode: string,
-): DijkstrasResultsTableMap {
+export function dijkstrasAlgorithm(nonDirectedGraphMap: DijkstrasNonDirectedGraphMap, fromNode: string): DijkstrasResultsTableMap {
     const visited: string[] = [fromNode];
     const allNodes: string[] = [];
 
@@ -33,8 +30,7 @@ export function dijkstrasAlgorithm(
         };
     }
 
-    if (!(fromNode in resultsTable))
-        throw new Error("node to search from doesn't exist in graph");
+    if (!(fromNode in resultsTable)) throw new Error("node to search from doesn't exist in graph");
 
     resultsTable[fromNode].shortestDistanceFromNodeX = 0;
 
@@ -50,19 +46,12 @@ export function dijkstrasAlgorithm(
                 // if target node has already been visited
                 continue;
 
-            edgeScoreFromCurrentToTargetNode =
-                nonDirectedGraphMap[prevNode][targetNode];
+            edgeScoreFromCurrentToTargetNode = nonDirectedGraphMap[prevNode][targetNode];
 
-            const sumScoreFromCurrentNodeToTargetNode =
-                resultsTable[prevNode].shortestDistanceFromNodeX +
-                edgeScoreFromCurrentToTargetNode;
+            const sumScoreFromCurrentNodeToTargetNode = resultsTable[prevNode].shortestDistanceFromNodeX + edgeScoreFromCurrentToTargetNode;
 
-            if (
-                sumScoreFromCurrentNodeToTargetNode <
-                resultsTable[targetNode].shortestDistanceFromNodeX
-            ) {
-                resultsTable[targetNode].shortestDistanceFromNodeX =
-                    sumScoreFromCurrentNodeToTargetNode;
+            if (sumScoreFromCurrentNodeToTargetNode < resultsTable[targetNode].shortestDistanceFromNodeX) {
+                resultsTable[targetNode].shortestDistanceFromNodeX = sumScoreFromCurrentNodeToTargetNode;
                 resultsTable[targetNode].previousVertex = prevNode;
             }
 
@@ -79,12 +68,8 @@ export function dijkstrasAlgorithm(
     return resultsTable;
 }
 
-export function getShortestPath(
-    djistraResultsTable: DijkstrasResultsTableMap,
-    destinationNode: string,
-): string[] {
-    if (!(destinationNode in djistraResultsTable))
-        throw new Error("destination node doesn't exist");
+export function getShortestPath(djistraResultsTable: DijkstrasResultsTableMap, destinationNode: string): string[] {
+    if (!(destinationNode in djistraResultsTable)) throw new Error("destination node doesn't exist");
     function getShortestPathArrRecursive(destinationNode: string): string[] {
         const prevNode = djistraResultsTable[destinationNode].previousVertex;
         if (prevNode) {
@@ -93,31 +78,20 @@ export function getShortestPath(
             return [];
         }
     }
-    return getShortestPathArrRecursive(destinationNode).concat([
-        destinationNode,
-    ]);
+    return getShortestPathArrRecursive(destinationNode).concat([destinationNode]);
 }
 
-export function getShortedPathArrowedFormattedString(
-    nodesPathArr: string[],
-): string {
-    if (nodesPathArr.length === 0)
-        throw new Error(
-            "nodes path array must contain string nodes in it and be non empty",
-        );
-    function getShortedPathArrowedFormattedStringRecursive(
-        nodesPathArr: string[],
-    ): string {
+export function getShortedPathArrowedFormattedString(nodesPathArr: string[]): string {
+    if (nodesPathArr.length === 0) throw new Error("nodes path array must contain string nodes in it and be non empty");
+    function getShortedPathArrowedFormattedStringRecursive(nodesPathArr: string[]): string {
         if (nodesPathArr.length > 0) {
-            return getShortedPathArrowedFormattedStringRecursive(
-                nodesPathArr.slice(0, nodesPathArr.length - 1),
-            ).concat(` --> ${nodesPathArr[nodesPathArr.length - 1]}`);
+            return getShortedPathArrowedFormattedStringRecursive(nodesPathArr.slice(0, nodesPathArr.length - 1)).concat(
+                ` --> ${nodesPathArr[nodesPathArr.length - 1]}`,
+            );
         } else {
             return "";
         }
     }
     // @ts-ignore
-    return nodesPathArr
-        .shift()
-        .concat(getShortedPathArrowedFormattedStringRecursive(nodesPathArr));
+    return nodesPathArr.shift().concat(getShortedPathArrowedFormattedStringRecursive(nodesPathArr));
 }
