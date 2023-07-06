@@ -17,11 +17,11 @@
 ## running
 
 -   npm i
--   npx run start
+-   npm run start
 
 ## running tests
 
--   npx run test
+-   npm run test
 
 ## graphs tested with usage code examples
 look at index.ts code for example usage! or read below for a more in detail explaination of how to use code. 
