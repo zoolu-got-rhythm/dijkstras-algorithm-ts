@@ -2,7 +2,7 @@
     "name": "dijkstras-algorithm-ts",
     "version": "1.0.1",
     "author": "christopher.pkm@gmail.com",
-    "description": "implementation of the greedy first search djikstra's algorithm",
+    "description": "typescript implementation of the greedy first search djikstra's algorithm, compatible with javascript projects too of course",
     "license": "MIT",
     "keywords": [
         "dijkstras",
