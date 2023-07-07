@@ -1,6 +1,6 @@
 {
     "name": "dijkstras-algorithm-ts",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "author": "christopher.pkm@gmail.com",
     "description": "typescript implementation of the greedy first search djikstra's shortest path algorithm, compatible with javascript projects too of course",
     "license": "MIT",
