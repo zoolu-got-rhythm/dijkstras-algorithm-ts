@@ -23,7 +23,7 @@
 
 -   npm run test
 
-## graphs tested with usage code examples
+## graphs tested with code usage examples
 look at index.ts code for example usage! or read below for a more in detail explaination of how to use code. 
 
 ### graph A tested with example code usage
@@ -53,7 +53,7 @@ const dijkstrasResultsLookUpTableFromNodeA = dijkstrasAlgorithm(
     );
 
 // output will be: 
-const resultsTableExpected: DijkstrasResultsTableMap = {
+const dijkstrasResultsLookUpTableFromNodeA: DijkstrasResultsTableMap = {
     a: { shortestDistanceFromNodeX: 0, previousVertex: null },
     b: { shortestDistanceFromNodeX: 3, previousVertex: "d" },
     c: { shortestDistanceFromNodeX: 7, previousVertex: "e" },
@@ -98,7 +98,7 @@ shortest paths results table from node a:
 const dijkstrasResultsLookUpTableFromA = dijkstrasAlgorithm(graphB, "a");
 
 // output will be:
-const resultsTableExpected: DijkstrasResultsTableMap = {
+const dijkstrasResultsLookUpTableFromA: DijkstrasResultsTableMap = {
     a: { shortestDistanceFromNodeX: 0, previousVertex: null },
     b: { shortestDistanceFromNodeX: 2, previousVertex: "a" },
     c: { shortestDistanceFromNodeX: 12, previousVertex: "f" },
