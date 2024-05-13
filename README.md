@@ -1,5 +1,4 @@
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fzoolu-got-rhythm%2Fdijkstras-algorithm-ts%2Fmain%2Fpackage.json&query=%24.version&prefix=v&label=npm)
-![Static Badge](https://img.shields.io/badge/CI-passing-green?logo=github)
 ![Static Badge](https://img.shields.io/badge/coverage-100%25-green)
 
 
