@@ -50,6 +50,8 @@
         "postversion": "git push && git push --tags"
     },
     "files": [
-        "dist/**/*"
+        "dist/dijkstrasAlgorithm.js",
+        "dist/dijkstrasAlgorithm.js.map",
+        "dist/dijkstrasAlgorithm.d.ts"
     ]
 }
