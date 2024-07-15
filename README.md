@@ -4,6 +4,14 @@
 
 # Dijkstra's Shortest Path Algorithm Typescript Implementation
 
+## using the package
+### usage code
+![usage code](./screenshots/usage_code.png)
+### usage results
+![results from usage code](./screenshots/results_from_usage_code.png)
+
+
+
 ## goals for this project
 
 -   study and learn about a new algorithm I didn't previously know (in this case dijkstra's shortest path algorithm) ✅
@@ -13,23 +21,24 @@
 -   once algorithm is implemented, write unit tests to verify output results are correct given the graph, starting node inputs ✅
 -   <em> side quest: test with multiple different graphs to be even more confident in implementation </em> ✅
 
-## running
+## development
+### running
 
 -   npm i
 -   npm run start
 
-## running tests
+### running tests
 
 -   npm run test
 
-## graphs tested with code usage examples
+### graphs tested with code usage examples
 look at index.ts code for example usage! or read below for a more in detail explaination of how to use code. 
 
-### graph A tested with example code usage
+#### graph A tested with example code usage
 
 algorithm implementation and graph used based off of youtube video https://www.youtube.com/watch?v=pVfj6mxhdMw&t=553s&ab_channel=ComputerScience
 
-<br />
+
 <img src="./images/graph-a.png" height="250px" alt="graph" />
 
 graph data structure representation:
@@ -74,9 +83,7 @@ const pathFormattedString = getShortedPathArrowedFormattedString(path);
 // output will be: "a --> d --> e --> c"
 ```
 
-### graph B tested with example code usage
-
-<br />
+#### graph B tested with example code usage
 <img src="./images/graph-b.png" height="250px" alt="graph" />
 
 graph data structure representation:
